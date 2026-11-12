@@ -12,7 +12,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; background: #ecece5; color: var(--ink); font-family: var(--serif); }
-h1, h2, p, figure { margin: 0; }
+h1, h2, p { margin: 0; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 [hidden] { display: none !important; }
@@ -230,13 +230,9 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 .hero-flowers-top { top: 10%; left: 1%; width: 35%; transform: rotate(138deg); }
 .hero-flowers-bottom { right: -3%; bottom: -1%; width: 34%; transform: rotate(-36deg); }
 
-.portraits { position: relative; width: 83%; aspect-ratio: 1.38; margin: 0 auto 23px; }
-.portrait { position: absolute; object-fit: cover; aspect-ratio: 4/5; height: auto; }
-.portrait-back { width: 50%; left: 0; top: 9%; z-index: 1; }
-.portrait-front { width: 59%; right: 0; top: 0; }
 .quote, .closing { position: relative; border-radius: 5px; background: var(--sage); color: #fffdf6; }
 .quote {
-  margin: 0 6% 37px;
+  margin: 12px 6% 37px;
   padding: 14px 11px 13px;
   font: 400 clamp(17px, 5.2vw, 25px)/1.28 var(--script);
 }
@@ -333,7 +329,13 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 .venue { position: relative; margin: 56px 6% 64px; min-height: 235px; }
 .venue-paper { margin-left: 16%; padding: 26px 9px 26px 48px; }
 .venue h2 { font-size: clamp(25px, 7.9vw, 38px); }
-.venue p { line-height: 1.13; }
+.venue p {
+  margin-inline-start: clamp(30px, 8vw, 42px);
+  line-height: 1.13;
+  letter-spacing: .02em;
+  text-transform: none;
+  text-wrap: balance;
+}
 .map-ornament { position: absolute; left: 0; top: 54px; width: 39%; isolation: isolate; }
 .map-link {
   position: relative;
@@ -396,8 +398,10 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 .closing .script { font-size: clamp(19px, 5.9vw, 29px); line-height: 1.22; }
 .closing-regards, .hosts { font-size: clamp(17px, 5.05vw, 24px); font-weight: 600; text-transform: uppercase; }
 .closing-regards { margin-top: 8px; letter-spacing: .085em; }
-.hosts { width: 62%; margin: 2px auto 0; padding: 2px 5px 3px; background: var(--olive); letter-spacing: .07em; }
-.closing-flowers { width: 49%; top: 69%; left: 25%; transform: rotate(15deg); }
+.hosts { width: fit-content; min-width: 62%; margin: 2px auto 0; padding: 2px 12px 3px; background: var(--olive); letter-spacing: .07em; }
+.closing-flowers { width: 41%; bottom: -27%; }
+.closing-flowers-left { left: -8%; transform: rotate(112deg); }
+.closing-flowers-right { right: -8%; transform: scaleX(-1) rotate(107deg); }
 
 @media (max-height: 580px) {
   .cover-content { padding-block: 38px 64px; }
