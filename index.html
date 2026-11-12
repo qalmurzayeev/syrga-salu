@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf8">
+  <meta name="description" content="Асхат пен Заринаның сырға салу рәсіміне шақыру.">
+  <title>Асхат пен Зарина — Сырға салуға шақыру</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="invite.js" defer></script>
+  <script src="schedule.js" defer></script>
+</head>
+<body>
+  <div class="cover" id="cover" hidden>
+    <div class="cover-sheet">
+      <img class="cover-wash" src="assets/wash.webp" alt="" fetchpriority="high">
+      <img class="flowers cover-flowers-top" src="assets/flowers.webp" alt="">
+      <img class="flowers cover-flowers-bottom" src="assets/flowers.webp" alt="">
+      <div class="cover-content">
+        <div class="monogram" aria-hidden="true"><span>А</span><span>&amp;</span><span>З</span></div>
+        <h1 class="cover-title">Сырға салуға шақыру</h1>
+        <a class="envelope envelope-button" href="#shaqyru" aria-label="Сырға салу рәсімінің шақыруын ашу">
+          <span class="envelope-back" aria-hidden="true"></span>
+          <span class="envelope-liner" aria-hidden="true"></span>
+          <span class="envelope-front" aria-hidden="true"></span>
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="wax envelope-wax" aria-hidden="true"></span>
+          <span class="open-label" aria-hidden="true"><span class="open-arrow">⤴</span>Басыңыз</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="invitation" id="shaqyru" tabindex="-1" aria-label="Асхат пен Заринаның сырға салу рәсіміне шақыру">
+    <header class="invitation-hero" aria-label="Сырға салу">
+      <img class="hero-wash" src="assets/wash.webp" alt="">
+      <div class="envelope envelope-open" aria-hidden="true">
+        <span class="envelope-back"></span>
+        <span class="envelope-liner"></span>
+        <span class="envelope-letter"><span class="mini-monogram">А <small>&amp;</small> З</span></span>
+        <span class="envelope-front"></span>
+        <span class="date-card"><span>Сырға салу</span><span id="card-date"></span></span>
+        <span class="wax envelope-wax"></span>
+      </div>
+      <img class="flowers hero-flowers-top" src="assets/flowers.webp" alt="">
+      <img class="flowers hero-flowers-bottom" src="assets/flowers.webp" alt="">
+    </header>
+
+    <figure class="portraits">
+      <img src="assets/couple.webp" class="portrait portrait-back" alt="" width="720" height="900">
+      <img src="assets/couple.webp" class="portrait portrait-front" alt="Бақ ішінде бірге тұрған жұптың үлгі фотосы" width="720" height="900">
+    </figure>
+
+    <div class="quote">
+      <img class="flowers quote-flowers" src="assets/flowers.webp" alt="" loading="lazy">
+      <p>Қос тағдырдың тоғысқан сәтіне<br>ортақтасып, ақ тілегіңізді<br>арнауға шақырамыз</p>
+    </div>
+
+    <section class="paper greeting" aria-labelledby="greeting-title">
+      <span class="wax greeting-wax" aria-hidden="true"></span>
+      <h2 class="script" id="greeting-title">Құрметті қонақтар!</h2>
+      <p>Ағайын-туыс, бауырлар,<br>құда-жекжат,<br>нағашы-жиен,<br>бөлелер, дос-жаран мен<br>әріптестер!</p>
+      <div class="greeting-details">
+        <p>Сіздерді</p>
+        <div class="groom-line"><span class="script name">Асхат</span><span>пен</span></div>
+        <p hidden></p>
+        <div class="script name bride-name">Заринаның</div>
+        <p>сырға салу рәсіміне<br>арналып жайылған ақ<br>дастарханымыздың<br>қадірлі қонағы болуға<br>шақырамыз!</p>
+      </div>
+    </section>
+
+    <section class="schedule" aria-labelledby="schedule-title">
+      <h2 class="script" id="schedule-title">Рәсімнің басталуы:</h2>
+      <!-- Күн мен уақытты өзгерту үшін datetime мәнін жаңартыңыз. -->
+      <time id="event-date" datetime="2026-12-12T17:00:00+05:00"><span id="event-day"></span><br><span id="event-clock"></span></time>
+      <div class="countdown" id="countdown" role="timer" aria-label="Сырға салу рәсіміне қалған уақыт">
+        <span class="count-unit"><span class="count-value" data-countdown="days">00</span><small>Күн</small></span>
+        <span class="count-divider" aria-hidden="true">:</span>
+        <span class="count-unit"><span class="count-value" data-countdown="hours">00</span><small>Сағат</small></span>
+        <span class="count-divider" aria-hidden="true">:</span>
+        <span class="count-unit"><span class="count-value" data-countdown="minutes">00</span><small>Минут</small></span>
+        <span class="count-divider" aria-hidden="true">:</span>
+        <span class="count-unit"><span class="count-value" data-countdown="seconds">00</span><small>Секунд</small></span>
+      </div>
+      <div class="calendar" role="table" aria-label="Рәсім күнтізбесі">
+        <div class="weekdays" role="row">
+          <span role="columnheader" aria-label="Дүйсенбі">ДС</span><span role="columnheader" aria-label="Сейсенбі">СС</span><span role="columnheader" aria-label="Сәрсенбі">СР</span><span role="columnheader" aria-label="Бейсенбі">БС</span><span role="columnheader" aria-label="Жұма">ЖМ</span><span role="columnheader" aria-label="Сенбі">СН</span><span role="columnheader" aria-label="Жексенбі">ЖС</span>
+        </div>
+        <div id="calendar-days" role="rowgroup"></div>
+      </div>
+    </section>
+
+    <section class="venue" aria-labelledby="venue-title">
+      <div class="paper venue-paper">
+        <h2 class="script" id="venue-title">Мекен-жайымыз:</h2>
+        <p>Алматы қаласы,<br>«Салтанат»<br>мейрамханасы</p>
+      </div>
+      <div class="map-ornament">
+        <img class="flowers map-flowers-top" src="assets/flowers.webp" alt="" loading="lazy">
+        <a class="map-link" href="https://2gis.kz/almaty/firm/70000001023961931" target="_blank" rel="noopener noreferrer" aria-label="Салтанат мейрамханасын 2GIS картасынан ашу">
+          <span class="map-icon" aria-hidden="true"><i></i></span>
+          <span>Картаны<br>ашу</span>
+        </a>
+        <img class="flowers map-flowers-bottom" src="assets/flowers.webp" alt="" loading="lazy">
+      </div>
+      <span class="map-arrow" aria-hidden="true">⤺</span>
+    </section>
+
+    <footer class="closing">
+      <p class="script">Рәсіміміздің қадірлі қонағы<br>болыңыздар!</p>
+      <p class="closing-regards">Құрметпен:</p>
+      <p class="hosts">Қуат-Гүлзада</p>
+      <img class="flowers closing-flowers" src="assets/flowers.webp" alt="" loading="lazy">
+    </footer>
+  </main>
+</body>
+</html>
