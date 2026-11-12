@@ -243,6 +243,12 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 .quote-flowers { width: 28%; left: -12%; top: -43%; transform: rotate(145deg); }
 .quote p { position: relative; }
 .script { font-family: var(--script); font-weight: 400; }
+.display-italic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  text-transform: none;
+}
 
 .paper {
   position: relative;
@@ -259,7 +265,6 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
   pointer-events: none;
   content: "";
 }
-.paper .script { text-transform: none; }
 .greeting {
   margin: 0 6%;
   padding: 32px 14px 29px;
@@ -271,17 +276,17 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 .greeting-wax { width: 34px; top: -16px; left: 50%; transform: translateX(-50%) rotate(12deg); }
 .greeting h2 {
   margin-bottom: 8px;
-  font-size: clamp(26px, 8.2vw, 41px);
-  line-height: 1.15;
+  font-size: clamp(27px, 8.9vw, 43px);
+  line-height: 1.08;
   letter-spacing: 0;
 }
 .greeting-details { margin-top: 24px; }
 .groom-line { display: flex; align-items: baseline; justify-content: center; column-gap: 9px; }
-.greeting .name { font-size: clamp(34px, 10.7vw, 51px); line-height: 1.12; letter-spacing: 0; }
+.greeting .name { font-size: clamp(36px, 12vw, 55px); font-weight: 600; line-height: 1.05; letter-spacing: 0; }
 .bride-name { margin-block: 3px 7px; }
 
 .schedule { margin: 54px 7% 0; }
-.schedule h2, .venue h2 { font-size: clamp(29px, 9.1vw, 44px); line-height: 1.16; }
+.schedule h2, .venue h2 { font-size: clamp(29px, 9.1vw, 44px); line-height: 1.1; }
 #event-date, .venue p {
   display: block;
   margin-top: 5px;
@@ -327,7 +332,7 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 
 .venue { position: relative; margin: 56px 6% 64px; min-height: 235px; }
 .venue-paper { margin-left: 16%; padding: 26px 9px 26px 48px; }
-.venue h2 { font-size: clamp(24px, 7.2vw, 37px); }
+.venue h2 { font-size: clamp(25px, 7.9vw, 38px); }
 .venue p { line-height: 1.13; }
 .map-ornament { position: absolute; left: 0; top: 54px; width: 39%; isolation: isolate; }
 .map-link {
