@@ -64,16 +64,10 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 .cover-flowers-bottom { width: 57%; bottom: -8%; right: -15%; transform: rotate(-37deg); }
 .monogram {
   display: grid;
-  grid-template-columns: 1fr .46fr 1fr;
-  align-items: center;
-  width: 137px;
+  place-items: center;
   height: 107px;
-  margin-inline: auto;
-  font: 400 64px/.85 var(--monogram);
+  font: 400 86px/.85 var(--monogram);
 }
-.monogram span:first-child { transform: translate(14px, -16px) rotate(-8deg); }
-.monogram span:nth-child(2) { transform: translate(5px, 2px); font-size: 33px; opacity: .7; }
-.monogram span:last-child { transform: translate(-3px, 17px) rotate(-10deg); }
 .cover-title {
   margin: 28px 10px 14px;
   font-size: clamp(18px, 5.2vw, 25px);
@@ -201,7 +195,6 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
   width: 100%;
   font: 400 clamp(17px, 5.4vw, 26px)/1 var(--monogram);
 }
-.mini-monogram small { display: inline; font-size: .7em; }
 .envelope-open .envelope-front {
   background: linear-gradient(120deg, #d8d5d6, #f9f7f6 65%);
   clip-path: polygon(0 0, 50% 51%, 100% 0, 100% 100%, 0 100%);
@@ -277,9 +270,14 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
   letter-spacing: 0;
 }
 .greeting-details { margin-top: 24px; }
-.groom-line { display: flex; align-items: baseline; justify-content: center; column-gap: 9px; }
-.greeting .name { font-size: clamp(36px, 12vw, 55px); font-weight: 600; line-height: 1.05; letter-spacing: 0; }
-.bride-name { margin-block: 3px 7px; }
+.greeting .name {
+  display: inline-block;
+  margin-block: 3px 7px;
+  font-size: clamp(36px, 12vw, 55px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
 
 .schedule { margin: 54px 7% 0; }
 .schedule h2, .venue h2 { font-size: clamp(29px, 9.1vw, 44px); line-height: 1.1; }
@@ -405,7 +403,7 @@ a:focus-visible { outline: 2px solid #5e684f; outline-offset: 6px; }
 
 @media (max-height: 580px) {
   .cover-content { padding-block: 38px 64px; }
-  .monogram { height: 86px; font-size: 55px; }
+  .monogram { height: 86px; font-size: 70px; }
   .cover-title { margin-top: 15px; }
   .envelope-button { width: min(77%, 295px); }
 }
